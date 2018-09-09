@@ -1,0 +1,40 @@
+<html lang="pt-br" ng-app="app">
+
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/pessoas.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <title>Desafio Scopi</title>
+    </head>
+
+    <body ng-controller="pessoasController">
+        <div class="container">
+            <h1>Lista do Cáfe <i class="fas fa-coffee"></i></h1>
+            <div class="row">
+                <a href="lista.html"><i class="fas fa-address-card"></i> Lista de Pessoas</a>
+                <a href="ordem.html"><i class="fas fa-book-open"></i> Ordem da semana</a>
+            </div>
+            <form name="form" ng-submit="submitForm(form.$valid)" novalidate>
+                <div class="form-group">
+                    <label>Digite no campo abaixo o nome da pessoa, depois clique no botão adicionar. Só serão válidos nomes com no mínimo 3 caracteres</label>
+                    <input id="nome" name="nome" type="text" placeholder="Digite o nome" ng-model="pessoa.nome" ng-minlength="3" ng-pattern="namePattern" class="form-control" />
+                    <label class="red" ng-show="form.nome.$error.pattern">*Digite um nome válido, use somente letras com ou sem acento.</label>
+                    <br/>
+                    <label class="red" ng-show="form.nome.$error.pattern">*Digite um nome válido, inicie nome e sobrenomes com letra maiúscula</label>
+                </div>
+                <input id="btn-confirm" type="submit" value="Adicionar" ng-click="salvar()" class="form-control btn btn-submit" ng-disabled="form.$invalid"/>
+            </form>
+            <table class="table table-stripped table-hover">
+                <tr ng-repeat="p in pessoas track by $index">
+                    <td style="text-align: left;">{{p.nome}}</td>
+                    <td style="text-align: right;"><button class="btn btn-delete" ng-click="excluir($index);">Exlcuir</button></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,82 @@
+<html lang="pt-br" ng-app="app">
+
+    <head>
+        <meta charset="utf-8" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="js/angular.min.js"></script>
+        <script src="js/pessoas.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <title>Desafio Scopi</title>
+    </head>
+
+    <body ng-controller="pessoasController">
+        <div class="container">
+            <h1> Lista do Cáfe <i class="fas fa-coffee"></i></h1>
+            <div class="row">
+                <a href="lista.html"><i class="fas fa-address-card"></i> Lista de Pessoas</a>
+                <a href="ordem.html"><i class="fas fa-book-open"></i> Ordem da semana</a>
+            </div>
+            <table border="1" ng-repeat="i in [].constructor(1) track by $index" style="font-size:22px;">
+                <tr>
+                    <th colspan="1" rowspan="2">Turno</th>
+                    <th colspan="5">Dia da semana</th>
+                </tr>
+                <tr>
+                    <th>
+                        Segunda-feira
+                    </th>
+                    <th>
+                        Terça-feira
+                    </th>
+                    <th>
+                        Quarta-feira
+                    </th>
+                    <th>
+                        Quinta-feira
+                    </th>
+                    <th>
+                        Sexta-feira
+                    </th>
+                </tr>
+                <tr>
+                    <td colspan="1">Manhã</td>
+                    <td>
+                        {{ordem[0].nome}} 
+                    </td>
+                    <td>
+                        {{ordem[2].nome}}
+                    </td>
+                    <td>
+                        {{ordem[4].nome}}
+                    </td>
+                    <td>
+                        {{ordem[6].nome}}
+                    </td>
+                    <td>
+                        {{ordem[8].nome}}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1">Tarde</td>
+                    <td>
+                        {{ordem[1].nome}}
+                    </td>
+                    <td>
+                        {{ordem[3].nome}}
+                    </td>
+                    <td>
+                        {{ordem[5].nome}}
+                    </td>
+                    <td>
+                        {{ordem[7].nome}}
+                    </td>
+                    <td>
+                        {{ordem[9].nome}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>

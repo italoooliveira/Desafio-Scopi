@@ -1,0 +1,97 @@
+h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #723508;
+}
+
+a,
+a i {
+    font-size: 20px;
+    color: #723508;
+    margin-right: 20px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #723508;
+}
+
+label {
+    font-size: 16px;
+    color: #c49a68;
+}
+
+table tr td,
+table tr th {
+    padding: 20px;
+    text-align: center;
+}
+
+table th {
+    color: #723508;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+table td {
+    color: #723508;
+}
+
+label.red{
+    color: red;
+    margin-top: 10px;
+}
+
+label.red:first-child{
+    margin-top: 0;
+    margin-top: 20px;
+}
+
+label.red:last-child{
+    margin-bottom: 30px;
+}
+
+.form-group{
+    margin-bottom: 0;
+}
+
+.btn-submit {
+    background: #723508 !important;
+    border-color: #723508 !important;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.btn-delete {
+    background: #c49a68 !important;
+    border-color: #c49a68 !important;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-submit:hover,
+.btn-delete:hover,
+.btn-submit:active,
+.btn-delete:active,
+.btn-submit:focus,
+.btn-delete:focus,
+.btn-submit:visited,
+.btn-delete:visited{
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid;
+    padding: 5px;
+    border-bottom: 1px solid;
+}
